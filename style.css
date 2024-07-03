@@ -18,16 +18,28 @@ input {
 
 .search-container {
  /* TODO */
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 .search-container input,
 .search-container .suggestions {
   /* TODO */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .search-container input {
  /* TODO */
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
 .search-container .suggestions {
    /* TODO */
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 ul {
