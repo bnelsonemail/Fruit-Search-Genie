@@ -1,0 +1,188 @@
+
+What HTML would you use for the search bar? 
+How about the drop down, the search button, and the filler text which will appear on the page?
+
+HTML Structure:
+        Search Input (#searchInput): Input field where users type their search queries.
+        Search Button (#searchButton): Button to initiate the search action.
+        Dropdown (#searchDropdown): Container for displaying predictive text options as the user types.
+
+HTML:
+    <div class="search-container">
+        <input type="text" id="search-bar" placeholder="Search for a fruit...">
+        <ul id="dropdown" class="dropdown"></ul>
+    </div>
+
+
+
+
+
+
+What CSS would you use to create the color gradient on the page?
+
+CSS Color Gradient:
+        Color Gradient for CSS can be obtained from multiple pages on the web.
+
+
+
+
+
+
+
+
+Define JavaScript Logic
+A. Initialize Variables and Constants
+        Create a list of fruits.
+        Get references to HTML elements.
+
+JavaScript:
+    Define a list of fruits.
+    Get references to the search bar and dropdown elements.
+
+
+
+B. Populate Dropdown Function
+        Function to create dropdown items from the fruit list.
+
+function populateDropdown():
+    clear existing dropdown items
+    for each fruit in fruit list:
+        create a dropdown item element
+        set its text content to the fruit name
+        add event listener for click event to populate the search bar
+        append the dropdown item to the dropdown list
+
+
+
+C. Show/Hide Dropdown Functions
+        Functions to control the visibility of the dropdown.
+
+function showDropdown():
+    set dropdown display to block
+
+function hideDropdown():
+    set dropdown display to none
+
+
+
+D. Filter Dropdown Items Function
+        Filter the dropdown items based on the input value.
+
+function filterDropdown():
+    get the search bar value and convert it to lowercase
+    for each dropdown item:
+        if the item text content includes the search bar value:
+            set item display to block
+        else:
+            set item display to none
+
+
+
+E. Event Listeners
+        Event listener for search bar input to filter the dropdown.
+        Event listener for search bar focus to show the dropdown.
+        Event listener for clicking outside the search container to hide the dropdown.
+
+searchBar.addEventListener('input', function):
+    call filterDropdown
+    call showDropdown
+
+searchBar.addEventListener('focus', function):
+    call showDropdown
+
+document.addEventListener('click', function(event)):
+    if the clicked element is not inside the search container:
+        call hideDropdown
+
+
+
+F. Initialize
+        Populate the dropdown with the full list of fruits.
+        Add event listeners to the dropdown items for selection.
+
+function initialize():
+    call populateDropdown
+    add event listeners to dropdown items
+
+initialize()
+
+
+Full JavaScript Pseudocode:
+    const fruits = ['Apple', 'Banana', 'Cherry', 'Date', 'Elderberry', 'Fig', 'Grape', 'Honeydew'];
+    const searchBar = document.getElementById('search-bar');
+    const dropdown = document.getElementById('dropdown');
+
+    function populateDropdown():
+        clear existing dropdown items
+        for each fruit in fruits:
+            create a dropdown item element
+            set its text content to the fruit name
+            add event listener for click event to populate the search bar
+            append the dropdown item to the dropdown list
+
+    function showDropdown():
+        set dropdown display to block
+
+    function hideDropdown():
+        set dropdown display to none
+
+    function filterDropdown():
+        get the search bar value and convert it to lowercase
+        for each dropdown item:
+            if the item text content includes the search bar value:
+                set item display to block
+            else:
+                set item display to none
+
+    searchBar.addEventListener('input', function):
+        call filterDropdown
+        call showDropdown
+
+    searchBar.addEventListener('focus', function):
+        call showDropdown
+
+    document.addEventListener('click', function(event)):
+        if the clicked element is not inside the search container:
+            call hideDropdown
+
+    function initialize():
+        call populateDropdown
+        add event listeners to dropdown items
+
+    initialize()
+
+
+
+
+
+
+How would you populate the search bar with an option from the drop down list? What event would trigger this action?
+
+Populating Search Bar:
+        When a user clicks on a dropdown option (click event), the search input should be populated with the selected option's text.
+
+        Create a variable named 'searchInput' that represents the search input element
+        Create a variable named 'searchDropdown' that represents the dropdown element
+
+        Event listener for dropdown click
+        searchDropdown.addEventListener('click', function(event) {
+            // Check if the clicked element is an option
+            if (event.target.tagName === 'OPTION') {
+                // Get the selected option's text
+                let selectedOptionText = event.target.textContent;
+                
+                // Populate the search bar with the selected option's text
+                searchInput.value = selectedOptionText;
+            }
+        });
+
+
+How would you structure your functions?
+
+Functions:
+        updateDropdown(searchTerm): Clears the dropdown and updates it with options matching the search term.
+        performSearch(searchText): Placeholder function to perform the actual search action (replace with your specific search logic).
+        Event listeners are structured to handle user interactions:
+            Input listener updates the dropdown as the user types.
+            Button click listener initiates the search action.
+            Dropdown click listener populates the search bar with the selected option.

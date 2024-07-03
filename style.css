@@ -8,6 +8,8 @@
 
 body {
   /* TODO */
+  background: rgb(244,113,6);
+  background: linear-gradient(90deg, rgba(244,113,6,1) 0%, rgba(214,41,205,1) 59%, rgba(238,9,37,1) 100%);
 }
 
 input {
