@@ -52,6 +52,16 @@ function populateDropdown():
         add event listener for click event to populate the search bar
         append the dropdown item to the dropdown list
 
+function searchHandler();
+1.  Text Input: The user starts typing a search query in the search bar.
+2.  Text Analysis: The search handler analyzes the text input in real-time, checking for patterns, keywords, and phrases.
+3.  Database Query: The search handler queries a database or a data source to retrieve relevant information related to the user’s search query.
+4.  Suggestion Generation: The search handler generates a list of suggested search queries based on the analyzed text input and the retrieved database results.
+5.  Suggestion Ranking: The search handler ranks the suggested search queries based on their relevance, popularity, and other factors to provide the most accurate and useful suggestions.
+6.  Suggestion Display: The search handler displays the suggested search queries in a dropdown menu or a list below the search bar.
+7.  User Selection: The user selects a suggested search query from the dropdown menu or list.
+8.  Search Execution: The search handler executes the selected search query and retrieves the relevant results.
+
 
 
 C. Show/Hide Dropdown Functions

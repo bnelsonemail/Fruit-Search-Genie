@@ -17,7 +17,20 @@ function search(str) {
 }
 
 function searchHandler(e) {
-	// TODO
+	const inputVal = e.target.value;
+	const results = search(inputVal);
+	const rankedResults = rankSuggestions(results);
+	showSuggestions(rankedResults, inputVal);
+}
+
+
+function rankSuggestions(results) {
+	// TODO: Implement ranking algorithm to rank the suggestions based on relevance, popularity, and other factors
+	// You can use any scoring mechanism or algorithm that suits your needs
+	// For example, you can assign scores to each suggestion based on its length, frequency of occurrence, etc.
+	// Then sort the suggestions based on their scores in descending order
+	// Finally, return the ranked suggestions
+	return results;
 }
 
 function showSuggestions(results, inputVal) {
@@ -29,10 +42,14 @@ function showSuggestions(results, inputVal) {
 		suggestion.innerHTML = item.replace(regex, '<span class="highlight">$1</span>');
 		suggestions.appendChild(suggestion);
 	});
+
+	suggestions.style.display = 'block'; // Show the suggestions in a drop down menu
 }
 
 function useSuggestion(e) {
-	// TODO
+	const clickedSuggestion = e.target.textContent;
+	input.value = clickedSuggestion;
+	suggestions.style.display = 'none'; // Hide the suggestions after selecting one
 }
 
 input.addEventListener('keyup', searchHandler);
