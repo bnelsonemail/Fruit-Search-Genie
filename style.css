@@ -49,23 +49,26 @@ input {
    overflow-y: auto;
    position: absolute;
    width: 100%;
-   background-color: #fff;
+   background-color: #ffffff;
    z-index: 1;
 }
 
 ul {
-  /* TODO */
+  list-style-type: none;
 }
 ul.has-suggestions {
-  /* TODO */
-  padding: 10px;
+  list-style-type: none;
+  padding: 5px;
   cursor: pointer;
 }
+
 ul li {
-  /* TODO */
+  list-style-type: none;
 }
 ul li:hover {
-  /* TODO */
+  background-color: rgb(137, 13, 238);
+  font-size: 20px;
+  transition: 0.8s;
 }
 
 input {
