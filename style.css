@@ -18,16 +18,19 @@ input {
 
 .search-container {
  /* TODO */
- display: flex;
- align-items: center;
- justify-content: center;
+ position: relative;
+ width: 300px;
+ margin: 50px auto;
 }
 .search-container input,
 .search-container .suggestions {
-  /* TODO */
+  /* TODO 
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;*/
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
 }
 .search-container input {
  /* TODO */
@@ -36,10 +39,18 @@ input {
  justify-content: center;
 }
 .search-container .suggestions {
-   /* TODO */
+   /* TODO 
    display: flex;
    align-items: center;
-   justify-content: center;
+   justify-content: center;*/
+   border: 1px solid #ccc;
+   border-top: none;
+   max-height: 150px;
+   overflow-y: auto;
+   position: absolute;
+   width: 100%;
+   background-color: #fff;
+   z-index: 1;
 }
 
 ul {
@@ -47,6 +58,8 @@ ul {
 }
 ul.has-suggestions {
   /* TODO */
+  padding: 10px;
+  cursor: pointer;
 }
 ul li {
   /* TODO */
