@@ -6,7 +6,12 @@ const fruit = ['Apple', 'Apricot', 'Avocado 🥑', 'Banana', 'Bilberry', 'Blackb
 function search(str) {
 	let results = [];
 
-	// TODO
+	if (str.length > 0) {
+		results = fruit.filter(item => {
+			const regex = new RegExp(`^${str}`, 'i');
+			return regex.test(item);
+		});
+	}
 
 	return results;
 }
@@ -16,8 +21,14 @@ function searchHandler(e) {
 }
 
 function showSuggestions(results, inputVal) {
+	suggestions.innerHTML = '';
 
-	// TODO
+	results.forEach(item => {
+		const regex = new RegExp(`(${inputVal})`, 'gi');
+		const suggestion = document.createElement('li');
+		suggestion.innerHTML = item.replace(regex, '<span class="highlight">$1</span>');
+		suggestions.appendChild(suggestion);
+	});
 }
 
 function useSuggestion(e) {
