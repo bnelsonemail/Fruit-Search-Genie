@@ -10,7 +10,7 @@ function search(str) {
 
 	if (str.length > 0) {
 		results = fruit.filter(item => {
-			const regex = new RegExp(`^${str}`, 'i');
+			const regex = new RegExp(`${str}`, 'i');
 			return regex.test(item);
 		});
 	}
@@ -53,12 +53,13 @@ function showSuggestions(results, inputVal) {
 
 
 
+input.addEventListener('keyup', searchHandler);
+suggestions.addEventListener('click', useSuggestion);
+
+
 
 function useSuggestion(e) {
 	const clickedSuggestion = e.target.textContent;
 	input.value = clickedSuggestion;
 	suggestions.style.display = 'none'; // Hide the suggestions after selecting one
 }
-
-input.addEventListener('keyup', searchHandler);
-suggestions.addEventListener('click', useSuggestion);
