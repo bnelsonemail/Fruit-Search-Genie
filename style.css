@@ -6,6 +6,16 @@ body {
   background: linear-gradient(90deg, rgba(244,113,6,1) 0%, rgba(214,41,205,1) 59%, rgba(238,9,37,1) 100%);
 }
 
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 2rem;
+  font-size: 4rem;
+  font-family: cursive;
+  font-weight: 900;
+  row-gap: .3rem;
+}
 input {
   width: 100%;
   padding: 10px;
